@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Table布局</title>
+  </head>
+  <style media="screen">
+    .container {
+      display: table;
+      width: 100%;
+    }
+    .left, .main, .right {
+      display: table-cell;
+    }
+    .left {
+      width: 200px;
+      height: 300px;
+      background-color: red;
+    }
+    .main {
+      background-color: blue;
+    }
+    .right {
+      width: 100px;
+      height: 300px;
+      background-color: green;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="left">
+
+      </div>
+      <div class="main">
+        缺点：无法设置栏间距
+      </div>
+      <div class="right">
+
+      </div>
+    </div>
+  </body>
+</html>

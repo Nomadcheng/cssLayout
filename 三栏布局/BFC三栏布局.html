@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BFC三栏布局</title>
+  </head>
+  <style media="screen">
+    .left {
+      float: left;
+      height: 300px;
+      width: 100px;
+      margin-right: 20px;
+      background-color: red;
+    }
+    .right {
+      width: 200px;
+      height: 300px;
+      float: right;
+      margin-left: 20px;
+      background-color: blue
+    }
+    .main {
+      height: 300px;
+      overflow: hidden;
+      background-color: green;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="left">
+
+      </div>
+      <div class="right">
+
+      </div>
+      <div class="main">
+        原理：利用overflow通过触发main生成BFC，来实现自适应三栏布局
+        缺点跟方法一类似，主要内容模块无法最先加载，当页面中内容较多时会影响用户体验。
+      </div>
+    </div>
+  </body>
+</html>
