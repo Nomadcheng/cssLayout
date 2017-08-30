@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>flex-demo</title>
+  </head>
+  <style media="screen">
+    .block {
+      width: 600px;
+      background-color: #f5f5d5;
+      margin: 0 auto;
+    }
+    .box {
+      display: flex;
+      width: 180px;
+      height: 180px;
+      background-color: yellow;
+      margin: 10px;
+    }
+    .item {
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      background-color: black;
+      margin: 5px;
+    }
+    span {
+      color: blue;
+    }
+    h1 {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h1>单项目布局</h1>
+    <div class="block">
+      <h2>居中对齐<span>&nbsp&nbsp{justify-content:center}</span></h2>
+      <h2>居右对齐<span>&nbsp&nbsp{justify-content:flex-end}</span></h2>
+      <h2>垂直居中<span>&nbsp&nbsp{align-items:center}</span></h2>
+      <div style="display:flex">
+        <div class="box" style="justify-content: center;">
+          <span class="item"></span>
+        </div>
+        <div class="box" style="justify-content: flex-end;">
+          <span class="item"></span>
+        </div>
+        <div class="box" style="align-items: center;">
+          <span class="item"></span>
+        </div>
+      </div>
+      <h2>完全居中<span>&nbsp&nbsp{justify-content:center; align-items:center}</span></h2>
+      <h2>底部对齐<span>&nbsp&nbsp{justify-content:center; align-items:flex-end}</span></h2>
+      <h2>右下角<span>&nbsp&nbsp{justify-content:center; align-items:flex-end}</span></h2>
+      <div style="display:flex">
+        <div class="box" style="justify-content:center; align-items:center;">
+          <span class="item"></span>
+        </div>
+        <div class="box" style="justify-content:center; align-items:flex-end;">
+          <span class="item"></span>
+        </div>
+        <div class="box" style="ustify-content:center; align-items:flex-end;">
+          <span class="item"></span>
+        </div>
+      </div>
+    </div>
+    <h1>双项目布局</h1>
+    <div class="block">
+      <h2>双项目布局，涉及到单个项目的定位，单个项目定位使用<span>&nbsp&nbsp{align-self:}</span></h2>
+      <div style="display:flex">
+        <div class="box" style="justify-content: space-between;">
+          <span class="item"></span>
+          <span class="item"></span>
+        </div>
+        <div class="box" style="justify-content: space-between; flex-direction: column;">
+          <span class="item"></span>
+          <span class="item"></span>
+        </div>
+        <div class="box" style="flex-direction:column; justify-content: space-between; align-items: center;">
+          <span class="item"></span>
+          <span class="item"></span>
+        </div>
+      </div>
+      <div style="display:flex">
+        <div class="box" style="flex-direction:column; justify-content:space-between; align-items:flex-end;">
+          <span class="item"></span>
+          <span class="item"></span>
+        </div>
+        <div class="box" style="">
+          <span class="item"></span>
+          <span class="item" style="align-self:center;"></span>
+        </div>
+        <div class="box" style="justify-content: space-between">
+          <span class="item"></span>
+          <span class="item" style="align-self: flex-end;"></span>
+        </div>
+      </div>
+      <h1>三项目布局</h1>
+      <div class="block">
+        <h2>三项目布局，涉及到单个项目的定位，单个项目定位使用<span>&nbsp&nbsp{align-self:}</span></h2>
+        <div style="display:flex">
+          <div class="box" style="flex-direction: column;">
+            <span class="item"></span>
+            <span class="item" style="align-self: center;"></span>
+            <span class="item" style="align-self: flex-end;"></span>
+          </div>
+        </div>
+      </div>
+      <h1>四项目&六项目</h1>
+      <div class="block">
+        <h2>四项目涉及到换行,以及多根轴线<span>&nbsp&nbsp{flex-wrap: wrap;align-content:flex-end}</span></h2>
+        <div style="display:flex">
+          <div class="box" style="flex-wrap: wrap-reverse; justify-content: flex-end; align-content: space-between">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+          </div>
+          <div class="box">
+            <div style="display: flex; flex-wrap: wrap; align-content: space-between">
+              <div class="column" style="flex-basis: 100%; display: flex; justify-content:space-between">
+                <span class="item"></span>
+                <span class="item"></span>
+              </div>
+              <div class="column" style="flex-basis: 100%; display: flex; justify-content:space-between">
+                <span class="item"></span>
+                <span class="item"></span>
+              </div>
+            </div>
+          </div>
+          <div class="box" style="flex-direction: column; flex-wrap: wrap; align-content: space-between">
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+            <span class="item"></span>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
