@@ -1,0 +1,54 @@
+<!-- text-overflow -->
+<!-- woed-wrap :keep-all,break-all,break-word-->
+<!-- woed-break -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Text</title>
+    <style media="screen">
+      p.test1 {
+        white-space: wrap;
+        width: 200px;
+        border: 1px solid #000000;
+        overflow: hidden;
+        text-overflow: clip;
+      }
+      p.test2 {
+        white-space: nowrap;
+        width: 200px;
+        border: 1px solid #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      p.test3 {
+        white-space: nowrap;
+        width: 200px;
+        border: 1px solid #000000;
+        overflow: hidden;
+        text-overflow: clip;
+      }
+      p.test3:hover {
+        text-overflow: inherit;
+        overflow: visible;
+      }
+      p.test4 {
+        white-space: nowrap;
+        width: 200px;
+        border: 1px solid #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      p.test4:hover{
+        text-overflow: inherit;
+        overflow: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="test1">this is test for textoverflow:clip for test</p>
+    <p class="test2">this is test for textoverflow:ellipsis for test</p>
+    <p class="test3">this is test for textoverflow:clip for test-oveflow</p>
+    <p class="test4">this is test for textoverflow:ellipsis</p>
+  </body>
+</html>
