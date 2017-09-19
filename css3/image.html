@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {margin:25px;}
+
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  position: relative;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+div.topleft {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+    color: yellow;
+}
+div.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.polaroid:hover .overlay {
+  opacity: 1;
+}
+div.test {
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Polaroid Images / Cards</h2>
+
+<div class="polaroid">
+  <img src="./img/rock600x400.jpg" alt="Norway" style="width:100%">
+  <div class="topleft">
+    the text here!
+  </div>
+  <div class="container">
+    <p>The Troll's tongue in Hardanger, Norway</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="./img/lights600x400.jpg" alt="Norway" style="width:100%">
+  <div class="overlay">
+    <div class="test">
+      hello world!
+    </div>
+  </div>
+  <div class="container">
+    <p>Northern Lights in Norway</p>
+  </div>
+</div>
+
+</body>
+</html>
