@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>centering</title>
+    <style media="screen">
+      body {
+        background: #f06d06;
+      }
+      .all {
+        background: white;
+        margin: 20px 0;
+        padding: 10px;
+      }
+
+      /*inlineCenter*/
+      .inlineCenter {
+        text-align: center; /*center*/
+      }
+
+      /*block center*/
+      .blockCenter {
+        margin: 0 auto;
+        width: 200px;
+        background: black;
+        padding: 20px;
+        color: white;
+      }
+
+      /*more than one block level element*/
+      .moreBlockCenter {
+        background: black;
+        color: white;
+        padding: 15px;
+        max-width: 125px;
+        margin: 5px;
+        display: inline-block;
+        text-align: left;
+      }
+
+      .inline-block-center {
+        text-align: center;
+      }
+
+      .flex-center {
+        display: flex;
+        justify-content: center;
+      }
+
+      /*moreBlockCenter in a row*/
+      .moreBlockCenter2 {
+        background: black;
+        margin: 5px auto;
+        color: white;
+        padding: 15px;
+      }
+      .moreBlockCenter2:nth-child(1) {
+        width: 200px;
+      }
+      .moreBlockCenter2:nth-child(2) {
+        width: 400px;
+      }
+      .moreBlockCenter2:nth-child(3) {
+        width: 125px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header class="inlineCenter all">
+        This text is inline centered.
+      </header>
+
+      <nav class="inlineCenter all" role='navigation'>
+        <a href="#">one</a>
+        <a href="#">two</a>
+        <a href="#">three</a>
+        <a href="#">four</a>
+      </nav>
+    </section>
+    <div class="blockCenter all">
+      this is a block-level element by giving it margin: 0 auto(and import
+      has a set width,otherwise it would be full width and wouldn't need centering).
+    </div>
+    <main class="inline-block-center all">
+      <div class="moreBlockCenter">
+        I'm an element that is block-like with my siblings and we're centered in a row.
+      </div>
+      <div class="moreBlockCenter">
+        I'm an element that is block-like with my siblings and we're centered in a row.
+        I have more content in me than my siblings do.
+      </div>
+      <div class="moreBlockCenter">
+        I'm an element that is block-like with my siblings and we're centered in a row.
+      </div>
+    </main>
+    <main class="flex-center all">
+      <div class="moreBlockCenter">
+        I'm an element that is block-like with my siblings and we're centered in a row.
+      </div>
+      <div class="moreBlockCenter">
+        I'm an element that is block-like with my siblings and we're centered in a row.
+        I have more content in me than my siblings do.
+      </div>
+      <div class="moreBlockCenter">
+        I'm an element that is block-like with my siblings and we're centered in a row.
+      </div>
+    </main>
+    <main class="all">
+      <div class="moreBlockCenter2">
+        I'm an element that is block-like with my siblings and we're centered in a row.
+      </div>
+      <div class="moreBlockCenter2">
+        I'm an element that is block-like with my siblings and we're centered in a row. I have more content in me than my siblings do.
+      </div>
+      <div class="moreBlockCenter2">
+        I'm an element that is block-like with my siblings and we're centered in a row.
+      </div>
+    </main>
+  </body>
+</html>

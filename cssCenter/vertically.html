@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vertically</title>
+  </head>
+  <style media="screen">
+    body {
+      background: #f06d06;
+      font-size: 80%
+    }
+
+    main {
+      background: white;
+      margin: 20px 0;
+      padding: 50px;
+    }
+
+    .inlineCenter {
+      background: black;
+      color: white;
+      padding: 40px 30px;
+      text-decoration: none;
+      margin: 100px 10px;
+    }
+
+    .noWrap {
+      background: black;
+      color: white;
+      height: 100px;
+      line-height: 100px;
+      padding: 20px;
+      width: 50%;
+      white-space: nowrap;
+    }
+
+    .flex-center1 {
+      width: 140px;
+      background: black;
+      color: white;
+      border: 10px solid white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 200px;
+      resize: vertical;
+      overflow: auto;
+    }
+
+    .flex-center1 p {
+      margin: 0;
+      padding: 20px;
+    }
+
+    .ghost-center {
+      position: relative;
+      background: white;
+      width: 240px;
+      height: 200px;
+      margin: 20px;
+      color: white;
+      overflow: auto;
+      padding: 20px;
+    }
+    .ghost-center::before {
+      content: " ";
+      display: inline-block;
+      height: 100%;
+      width: 1%;
+      vertical-align: middle;
+    }
+    .ghost-center p {
+      width: 190px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 190px;
+      margin: 0;
+      padding: 20px;
+      background: black;
+    }
+
+    .blockCenter {
+      background: white;
+      height: 300px;
+      margin: 20px;
+      width: 300px;
+      position: relative;
+      resize: vertical;
+      overflow: auto;
+    }
+
+    .blockCenter div {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      right: 20px;
+      height: 100px;
+      margin-top: -70px;
+      background: black;
+      color: white;
+      padding: 20px;
+    }
+
+    .unknowHeight {
+      background: white;
+      height: 300px;
+      margin: 20px;
+      width: 300px;
+      position: relative;
+      resize: vertical;
+      overflow: auto;
+    }
+    .unknowHeight div {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      right: 20px;
+      background: black;
+      color: white;
+      padding: 20px;
+      transform: translateY(-50%);
+      resize: vertical;
+      overflow: auto;
+    }
+
+    .flex-center2 {
+      background: white;
+      height: 300px;
+      width: 200px;
+      padding: 20px;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      resize: vertical;
+      overflow: auto;
+    }
+    .flex-center2 div {
+      background: black;
+      color: white;
+      padding: 20px;
+      resize: vertical;
+      overflow: auto;
+    }
+  </style>
+  <body>
+    <main>
+      <a href="#" class="inlineCenter">We're</a>
+      <a href="#" class="inlineCenter">Centered</a>
+      <a href="#" class="inlineCenter">Bits of</a>
+      <a href="#" class="inlineCenter">Text</a>
+    </main>
+    <main>
+      <div class="noWrap">
+        I'm  a centerd single line that can use line-height to vertical center;
+        and the value of line-height is equal to height;
+      </div>
+    </main>
+    <main class="flex-center1">
+      <p>I'm vertically centered multiple lines of text in a flexbox container.
+      Remember that it's only really relevant if the parent container has a fixed
+      height (px, %, etc), which is why the container here has a height.</p>
+    </main>
+
+    <main class="ghost-center">
+      <p>I'm vertically centered multiple lines of text in a container.Centered with a
+      ghost pseudo element;because i don't have a fixed height,you could employ the
+       "ghost element" technique, in which a full-height pseudo element is placed inside
+       the container and the text is vertically aligned with that.</p>
+    </main>
+
+    <main class="blockCenter">
+      <div class="">
+        I'm a block-level element with a fixed height, centered vertically within my parent.
+        with has konwn height use position and margin to set it;
+      </div>
+    </main>
+    <main class="unknowHeight">
+      <div class="">
+        I'm a block-level element with an unknown height, centered vertically within my parent.
+        with unknow heigth then we use css3 transform:translate();
+      </div>
+    </main>
+    <main class="flex-center2">
+      <div class="">
+        I'm a block-level element with an unknown height, centered vertically within my parent.
+        it's easier to use flex;
+      </div>
+    </main>
+  </body>
+</html>
