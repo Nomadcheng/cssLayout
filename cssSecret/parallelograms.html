@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .button1 {
+        padding: .5em 1em;
+        border: 0;
+        margin: 1em;
+        background: #58a;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font: bold 200%/1 sans-serif;
+        transform: skewX(-45deg);
+        display: inline-block;
+      }
+      .button1 > div {
+        transform: skewX(45deg);
+      }
+      .button2 {
+        position: relative;
+      }
+      .button2::before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        background: #58a;
+        transform: skewX(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" class="button1">
+      <div>
+        Click me
+      </div>
+    </a>
+    <a href="#" class="button2">
+    </a>
+  </body>
+</html>

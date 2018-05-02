@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>multiple-borders</title>
+    <style media="screen">
+      body{
+        background: url('http://csssecrets.io/images/stone-art.jpg');
+      }
+      div {
+        background: yellowgreen;
+        width: 20em;
+        height: 10em;
+        margin: 2em auto 0;
+        /* outline 不会贴合border-radius */
+        border: 10px solid #655;
+        border-radius: 20px;
+        outline: 1px dashed deeppink;
+        outline-offset: -20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="">
+
+    </div>
+  </body>
+</html>
