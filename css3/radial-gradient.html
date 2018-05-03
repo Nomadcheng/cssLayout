@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      div.gradient{
+        height: 100px;
+        background-color: red;
+        background-image:
+          radial-gradient(
+            circle closest-side,
+            yellow,
+            #f06d06
+          );
+      }
+      div.gradient2 {
+        margin-top: 20px;
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        background-image:
+          radial-gradient(
+            circle farthest-corner at top right ,
+            yellow,
+            #f06d06 50%
+            );
+      }
+      div.repeat {
+        margin-top: 20px;
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        background-image: repeating-radial-gradient(
+          circle at 0 0,
+          #eee,
+          #ccc 20px
+          );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gradient">
+
+    </div>
+    <div class="gradient2">
+
+    </div>
+    <div class="repeat">
+
+    </div>
+  </body>
+</html>

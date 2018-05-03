@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body {
+        padding: 2em;
+      }
+      .pie {
+        display: inline-block;
+        margin-left: 20px;
+        width: 100px; height: 100px;
+        border-radius: 50%;
+        background: yellowgreen;
+        overflow: hidden;
+        color: transparent;
+        background-image: linear-gradient(
+          to right,
+          transparent 50%,
+          #655 0
+          );
+      }
+      /* 伪元素display默认为inline，不能设置宽高 */
+      .pie::before {
+        content: '';
+        display: block;
+        margin-left: 50%;
+        height: 100%;
+        background-color: inherit;
+        transform-origin: left;
+        animation: spin 50s linear infinite,
+                   bg 100s step-end infinite;
+        /* animation-delay: -10s; */
+        animation-delay: inherit;
+        animation-play-state: paused;
+      }
+      @keyframes spin {
+        to {transform: rotate(.5turn); }
+      }
+      @keyframes bg {
+        50% {background: #655; }
+      }
+      /* 转动大于50%时*/
+      /* .pie::before {
+        background: #655;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="pie">10</div>
+    <div class="pie">20</div>
+    <div class="pie">30</div>
+    <div class="pie">60</div>
+    <script type="text/javascript">
+      let pieList = document.querySelectorAll('.pie');
+      pieList.forEach((pie) => {
+        let p = parseFloat(pie.textContent);
+        pie.style.animationDelay = '-' + p + 's';
+      })
+    </script>
+  </body>
+</html>
