@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .element {
+        height: 100px;
+        width: 100px;
+        background-color: #3d9970;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        color: white;
+        padding: 5px;
+        animation: shimmy 3s infinite;
+        animation-direction: alternate;
+      }
+      @keyframes shimmy {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(20px, 50px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>It's important to note that an element using transform will not cause other
+        element to flow around it</p>
+    <div class="element">
+    </div>
+    <p>By using the translate function below and nudging the green aquare out of its original posision
+       ,we'll notice how the surrounding text will remain fixed in place, as if the square is a block element;</p>
+  </body>
+</html>
