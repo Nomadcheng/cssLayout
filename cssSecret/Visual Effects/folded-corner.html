@@ -4,21 +4,45 @@
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
-      div {
+      .note {
         width: 12em;
-        background: #58a;/* Fallback */
+        padding: 2em;
+        color: white;
+        position: relative;
+        background: #58a;
+        background: linear-gradient(-150deg, transparent 1.5em, #58a 0);
+        border-radius: .5em;
+      }
+      .note::before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0;
+        background: linear-gradient(to left bottom,
+          transparent 50%, rgba(0,0,0,.4) 0)
+          100% 0 no-repeat;
+        width: 1.73em;
+        height: 3em;
+        transform: translateY(-1.3em) rotate(-30deg);
+        transform-origin: bottom right;
+        border-bottom-left-radius: inherit;
+        box-shadow: -.2em .2em .3em -.1em rgba(0,0,0,.15);
+      }
+
+      /* div {
+        width: 12em;
+        background: #58a;
         background:
-            linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,.4) 0) 100% 0 no-repeat,
-            linear-gradient(-135deg, transparent 1.5em, #58a 0);
-        background-size: 2em 2em, auto;
+            linear-gradient(to left bottom, transparent 50%, rgba(0,0,0,.4) 0)
+            100% 0 no-repeat/ 3em 1.73em,
+            linear-gradient(-150deg, transparent 1.4em, #58a 0);
         padding: 2em;
         color: white;
         font: 100%/1.6 Baskerville, Palatino, serif;
-      }
+      } */
     </style>
   </head>
   <body>
-    <div>“The only way to get rid of a temptation is to yield to it.”
+    <div class="note">“The only way to get rid of a temptation is to yield to it.”
 — Oscar Wilde, The Picture of Dorian Gray</div>
   </body>
 </html>

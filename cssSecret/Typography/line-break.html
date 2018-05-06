@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      dt, dd {
+        display: inline;
+        margin: 0;
+      }
+      dd {
+        font-weight: 600;
+      }
+      /* line break */
+      dd + dt::before {
+        content: '\A';
+        white-space: pre;
+      }
+
+      dd + dd::before {
+        content: ', ';
+        font-weight: normal;
+        margin-left: -25.em;
+      }
+    </style>
+  </head>
+  <body>
+    <dl class="">
+      <dt>Name:</dt>
+      <dd>Lea Verou</dd>
+
+      <dt>Email:</dt>
+      <dd>lea@verou.me</dd>
+      <dd>leaveru@mit.edu</dd>
+      <dd>Earth@me.com</dd>
+    </dl>
+  </body>
+</html>
